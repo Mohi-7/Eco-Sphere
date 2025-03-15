@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Zero Waste Living - EcoSphere</title>
+  <meta name="description" content="Learn about zero waste living and sustainable practices" />
+  <link rel="stylesheet" href="styles.css" />
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+</head>
+<body class="light-mode">
+  <!-- Navigation Bar (same as index.html) -->
+  <nav class="navbar" role="navigation">
+    <div class="container nav-container">
+      <a href="index.html" class="logo" aria-label="EcoSphere Home">
+        <i class="fas fa-leaf" aria-hidden="true"></i>
+        <span>EcoSphere</span>
+      </a>
+      <button class="nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <ul class="nav-menu" role="menu">
+        <li class="nav-item dropdown" role="none">
+          <button class="nav-link" role="menuitem" aria-haspopup="true" aria-expanded="false">
+            Categories <i class="fas fa-chevron-down" aria-hidden="true"></i>
+          </button>
+          <ul class="dropdown-menu" role="menu">
+            <li role="none"><a href="zero-waste.html" class="dropdown-item" role="menuitem">Zero Waste Living</a></li>
+            <li role="none"><a href="sustainable-travel.html" class="dropdown-item" role="menuitem">Sustainable Travel</a></li>
+            <li role="none"><a href="sustainable-fashion.html" class="dropdown-item" role="menuitem">Sustainable Fashion</a></li>
+            <li role="none"><a href="plant-based.html" class="dropdown-item" role="menuitem">Plant-Based Living</a></li>
+            <li role="none"><a href="green-home.html" class="dropdown-item" role="menuitem">Green Home</a></li>
+            <li role="none"><a href="eco-fitness.html" class="dropdown-item" role="menuitem">Eco Fitness</a></li>
+          </ul>
+        </li>
+        <li class="nav-item" role="none">
+          <a href="blog.html" class="nav-link" role="menuitem">Blog</a>
+        </li>
+        <li class="nav-item" role="none">
+          <a href="contact.html" class="nav-link" role="menuitem">Contact</a>
+        </li>
+        <li class="nav-item" role="none">
+          <button id="theme-toggle" class="theme-toggle" aria-label="Toggle dark mode">
+            <i class="fas fa-sun" aria-hidden="true"></i>
+            <i class="fas fa-moon" aria-hidden="true"></i>
+          </button>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Page Hero Section -->
+  <section class="page-hero" data-aos="fade-up">
+    <div class="container">
+      <div class="hero-content">
+        <h1 class="hero-title" data-aos="fade-up">Zero Waste Living</h1>
+        <p class="hero-subtitle" data-aos="fade-up" data-aos-delay="100">
+          Embrace a lifestyle that minimizes waste and maximizes sustainability. Here you will find tips, strategies and guides for living a zero waste life.
+        </p>
+        <a href="contact.html" class="btn btn-primary" data-aos="fade-up" data-aos-delay="200">
+          Get Started
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Main Content -->
+  <main class="container" data-aos="fade-up">
+    <section class="principles-section">
+      <h2 class="section-title" data-aos="fade-up">Key Principles of Zero Waste</h2>
+      <div class="principles-grid">
+        <div class="principle-card" data-aos="fade-up">
+          <i class="fas fa-recycle"></i>
+          <h3>Refuse</h3>
+          <p>Say no to unnecessary items and single-use plastics.</p>
+        </div>
+        <div class="principle-card" data-aos="fade-up" data-aos-delay="100">
+          <i class="fas fa-minus-circle"></i>
+          <h3>Reduce</h3>
+          <p>Minimize consumption and choose quality over quantity.</p>
+        </div>
+        <div class="principle-card" data-aos="fade-up" data-aos-delay="200">
+          <i class="fas fa-sync"></i>
+          <h3>Reuse</h3>
+          <p>Opt for reusable alternatives to disposable items.</p>
+        </div>
+        <div class="principle-card" data-aos="fade-up" data-aos-delay="300">
+          <i class="fas fa-tools"></i>
+          <h3>Repair</h3>
+          <p>Fix and repurpose items before replacing them.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Impact Counter Section -->
+    <section class="impact-counter-section" data-aos="fade-up">
+      <div class="container">
+        <h2 class="section-title">Track Your Impact</h2>
+        <p class="section-subtitle">See how your efforts are helping save the planet</p>
+
+        <div class="counter-container">
+          <div class="input-section">
+            <h3>Log Your Progress</h3>
+            <div class="bottle-input">
+              <label for="bottles-saved">Number of plastic bottles avoided:</label>
+              <input type="number" id="bottles-saved" min="0" value="0">
+              <button class="btn btn-primary" onclick="updateImpact()">Add to Total</button>
+            </div>
+          </div>
+
+          <div class="impact-stats">
+            <div class="stat-card" data-aos="fade-up">
+              <i class="fas fa-bottle-water"></i>
+              <h4>Bottles Saved</h4>
+              <span class="counter" id="total-bottles">0</span>
+            </div>
+            <div class="stat-card" data-aos="fade-up" data-aos-delay="100">
+              <i class="fas fa-tree"></i>
+              <h4>Trees Equivalent</h4>
+              <span class="counter" id="trees-saved">0</span>
+            </div>
+            <div class="stat-card" data-aos="fade-up" data-aos-delay="200">
+              <i class="fas fa-cloud"></i>
+              <h4>CO₂ Reduced (kg)</h4>
+              <span class="counter" id="co2-saved">0</span>
+            </div>
+          </div>
+
+          <div class="achievements">
+            <h3>Your Achievements</h3>
+            <div class="badges-container">
+              <div class="badge" id="starter-badge">
+                <i class="fas fa-seedling"></i>
+                <span>Eco Starter</span>
+              </div>
+              <div class="badge locked" id="green-warrior">
+                <i class="fas fa-shield-alt"></i>
+                <span>Green Warrior</span>
+              </div>
+              <div class="badge locked" id="earth-guardian">
+                <i class="fas fa-award"></i>
+                <span>Earth Guardian</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer reveal-section" role="contentinfo" data-aos="fade-up">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-section">
+          <h3>EcoSphere</h3>
+          <p>Empowering sustainable living through education and community engagement.</p>
+        </div>
+        <div class="footer-section">
+          <h3>Quick Links</h3>
+          <ul>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h3>Categories</h3>
+          <ul>
+            <li><a href="zero-waste.html">Zero Waste Living</a></li>
+            <li><a href="sustainable-travel.html">Sustainable Travel</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h3>Connect With Us</h3>
+          <div class="social-links">
+            <a href="#" aria-label="Follow us on Facebook"><i class="fab fa-facebook" aria-hidden="true"></i></a>
+            <a href="#" aria-label="Follow us on Twitter"><i class="fab fa-twitter" aria-hidden="true"></i></a>
+            <a href="#" aria-label="Follow us on Instagram"><i class="fab fa-instagram" aria-hidden="true"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; <script>document.write(new Date().getFullYear())</script> EcoSphere. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Blog - EcoSphere</title>
+  <meta name="description" content="Get inspired with sustainable living tips and eco-friendly lifestyle stories" />
+  <link rel="stylesheet" href="styles.css" />
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+</head>
+<body class="light-mode">
+  <!-- Navigation Bar -->
+  <nav class="navbar" role="navigation">
+    <div class="container nav-container">
+      <a href="index.html" class="logo" aria-label="EcoSphere Home">
+        <i class="fas fa-leaf" aria-hidden="true"></i>
+        <span>EcoSphere</span>
+      </a>
+      <button class="nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <ul class="nav-menu" role="menu">
+        <li class="nav-item dropdown" role="none">
+          <button class="nav-link" role="menuitem" aria-haspopup="true" aria-expanded="false">
+            Categories <i class="fas fa-chevron-down" aria-hidden="true"></i>
+          </button>
+          <ul class="dropdown-menu" role="menu">
+            <li role="none"><a href="zero-waste.html" class="dropdown-item" role="menuitem">Zero Waste Living</a></li>
+            <li role="none"><a href="sustainable-travel.html" class="dropdown-item" role="menuitem">Sustainable Travel</a></li>
+            <li role="none"><a href="sustainable-fashion.html" class="dropdown-item" role="menuitem">Sustainable Fashion</a></li>
+            <li role="none"><a href="plant-based.html" class="dropdown-item" role="menuitem">Plant-Based Living</a></li>
+            <li role="none"><a href="green-home.html" class="dropdown-item" role="menuitem">Green Home</a></li>
+            <li role="none"><a href="eco-fitness.html" class="dropdown-item" role="menuitem">Eco Fitness</a></li>
+          </ul>
+        </li>
+        <li class="nav-item" role="none">
+          <a href="blog.html" class="nav-link" role="menuitem">Blog</a>
+        </li>
+        <li class="nav-item" role="none">
+          <a href="contact.html" class="nav-link" role="menuitem">Contact</a>
+        </li>
+        <li class="nav-item" role="none">
+          <button id="theme-toggle" class="theme-toggle" aria-label="Toggle dark mode">
+            <i class="fas fa-sun" aria-hidden="true"></i>
+            <i class="fas fa-moon" aria-hidden="true"></i>
+          </button>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Blog Hero Section -->
+  <section class="page-hero" data-aos="fade-up">
+    <div class="container">
+      <div class="hero-content">
+        <h1 class="hero-title" data-aos="fade-up">Our Blog</h1>
+        <p class="hero-subtitle" data-aos="fade-up" data-aos-delay="100">
+          Get inspired with stories, tips, and insights about sustainable living
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Featured Posts -->
+  <section class="featured-posts section-padding" data-aos="fade-up">
+    <div class="container">
+      <h2 class="section-title">Featured Stories</h2>
+      <div class="featured-grid">
+        <article class="featured-card" data-aos="fade-up">
+          <div class="featured-image">
+            <i class="fas fa-tree featured-icon"></i>
+          </div>
+          <div class="featured-content">
+            <span class="category-tag">Zero Waste</span>
+            <h3>How Small Changes Make Big Impact</h3>
+            <p>Discover how simple daily choices can contribute to environmental conservation...</p>
+            <a href="#" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+          </div>
+        </article>
+        <article class="featured-card" data-aos="fade-up" data-aos-delay="100">
+          <div class="featured-image">
+            <i class="fas fa-leaf featured-icon"></i>
+          </div>
+          <div class="featured-content">
+            <span class="category-tag">Sustainable Living</span>
+            <h3>10 Easy Steps to Reduce Your Carbon Footprint</h3>
+            <p>Simple yet effective ways to make your lifestyle more environmentally friendly...</p>
+            <a href="#" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Blog Posts Grid -->
+  <section class="blog-posts section-padding" data-aos="fade-up">
+    <div class="container">
+      <div class="blog-filters">
+        <button class="filter-btn active" data-category="all">All</button>
+        <button class="filter-btn" data-category="zero-waste">Zero Waste</button>
+        <button class="filter-btn" data-category="sustainable-living">Sustainable Living</button>
+        <button class="filter-btn" data-category="eco-tips">Eco Tips</button>
+      </div>
+      <div class="blog-grid">
+        <!-- Blog Post Cards -->
+        <article class="blog-card" data-category="zero-waste" data-aos="fade-up">
+          <div class="blog-image">
+            <i class="fas fa-recycle"></i>
+          </div>
+          <div class="blog-content">
+            <span class="date">March 15, 2025</span>
+            <h3>Starting Your Zero Waste Journey</h3>
+            <p>Learn the basics of zero waste living and how to begin your sustainable lifestyle journey...</p>
+            <a href="#" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+          </div>
+        </article>
+
+        <article class="blog-card" data-category="sustainable-living" data-aos="fade-up">
+          <div class="blog-image">
+            <i class="fas fa-home"></i>
+          </div>
+          <div class="blog-content">
+            <span class="date">March 14, 2025</span>
+            <h3>Sustainable Home Improvements</h3>
+            <p>Discover eco-friendly ways to upgrade your living space while reducing environmental impact...</p>
+            <a href="#" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+          </div>
+        </article>
+
+        <article class="blog-card" data-category="eco-tips" data-aos="fade-up">
+          <div class="blog-image">
+            <i class="fas fa-lightbulb"></i>
+          </div>
+          <div class="blog-content">
+            <span class="date">March 13, 2025</span>
+            <h3>Energy-Saving Tips for Every Home</h3>
+            <p>Simple and effective ways to reduce your energy consumption and save money...</p>
+            <a href="#" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+          </div>
+        </article>
+      </div>
+      
+      <!-- Load More Button -->
+      <div class="text-center mt-4">
+        <button class="btn btn-outline load-more">Load More Posts</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Newsletter Section -->
+  <section class="newsletter-section" data-aos="fade-up">
+    <div class="container">
+      <div class="newsletter-content">
+        <h2>Stay Updated</h2>
+        <p>Subscribe to our newsletter for the latest sustainable living tips and stories</p>
+        <form class="newsletter-form">
+          <input type="email" placeholder="Enter your email" required>
+          <button type="submit" class="btn btn-primary">Subscribe</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer reveal-section" role="contentinfo" data-aos="fade-up">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-section">
+          <h3>EcoSphere</h3>
+          <p>Empowering sustainable living through education and community engagement.</p>
+        </div>
+        <div class="footer-section">
+          <h3>Quick Links</h3>
+          <ul>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h3>Categories</h3>
+          <ul>
+            <li><a href="zero-waste.html">Zero Waste Living</a></li>
+            <li><a href="sustainable-travel.html">Sustainable Travel</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h3>Connect With Us</h3>
+          <div class="social-links">
+            <a href="#" aria-label="Follow us on Facebook"><i class="fab fa-facebook" aria-hidden="true"></i></a>
+            <a href="#" aria-label="Follow us on Twitter"><i class="fab fa-twitter" aria-hidden="true"></i></a>
+            <a href="#" aria-label="Follow us on Instagram"><i class="fab fa-instagram" aria-hidden="true"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; <script>document.write(new Date().getFullYear())</script> EcoSphere. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
