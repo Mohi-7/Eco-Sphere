@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>EcoSphere - Sustainable Living</title>
+  <meta name="description" content="Join our community for sustainable living tips and eco-friendly lifestyle guidance" />
+  <link rel="stylesheet" href="styles.css" />
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+</head>
+<body class="light-mode">
+  <!-- Navigation Bar -->
+  <nav class="navbar" role="navigation">
+    <div class="container nav-container">
+      <a href="index.html" class="logo" aria-label="EcoSphere Home">
+        <i class="fas fa-leaf" aria-hidden="true"></i>
+        <span>EcoSphere</span>
+      </a>
+      <button class="nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <ul class="nav-menu" role="menu">
+        <li class="nav-item dropdown" role="none">
+          <button class="nav-link" role="menuitem" aria-haspopup="true" aria-expanded="false">
+            Categories <i class="fas fa-chevron-down" aria-hidden="true"></i>
+          </button>
+          <ul class="dropdown-menu" role="menu">
+            <li role="none"><a href="zero-waste.html" class="dropdown-item" role="menuitem">Zero Waste Living</a></li>
+            <li role="none"><a href="sustainable-travel.html" class="dropdown-item" role="menuitem">Sustainable Travel</a></li>
+            <li role="none"><a href="sustainable-fashion.html" class="dropdown-item" role="menuitem">Sustainable Fashion</a></li>
+            <li role="none"><a href="plant-based.html" class="dropdown-item" role="menuitem">Plant-Based Living</a></li>
+            <li role="none"><a href="green-home.html" class="dropdown-item" role="menuitem">Green Home</a></li>
+            <li role="none"><a href="eco-fitness.html" class="dropdown-item" role="menuitem">Eco Fitness</a></li>
+          </ul>
+        </li>
+        <li class="nav-item" role="none">
+          <a href="blog.html" class="nav-link" role="menuitem">Blog</a>
+        </li>
+        <li class="nav-item" role="none">
+          <a href="contact.html" class="nav-link" role="menuitem">Contact</a>
+        </li>
+        <li class="nav-item" role="none">
+          <button id="theme-toggle" class="theme-toggle" aria-label="Toggle dark mode">
+            <i class="fas fa-sun" aria-hidden="true"></i>
+            <i class="fas fa-moon" aria-hidden="true"></i>
+          </button>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero reveal-section" data-aos="fade-up">
+    <div class="container">
+      <div class="hero-content">
+        <h1 class="hero-title" data-aos="fade-up">
+          Live Green, 
+          <span class="dynamic-text" data-text="Live Better">Live Better</span>
+        </h1>
+        <p class="hero-subtitle" data-aos="fade-up" data-aos-delay="100">
+          Join our community of eco-conscious individuals making sustainable choices 
+          for a better tomorrow. Discover tips, guides, and inspiration for living 
+          in harmony with nature.
+        </p>
+        <div class="hero-buttons" data-aos="fade-up" data-aos-delay="200">
+          <a href="blog.html" class="btn btn-primary">
+            Explore Articles <i class="fas fa-arrow-right" aria-hidden="true"></i>
+          </a>
+          <a href="contact.html" class="btn btn-outline">Get In Touch</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Categories Section -->
+  <section class="categories reveal-section" aria-labelledby="categories-title" data-aos="fade-up">
+    <div class="container">
+      <h2 id="categories-title" class="section-title" data-aos="fade-up">
+        Explore Sustainable Living
+      </h2>
+      <p class="section-subtitle" data-aos="fade-up" data-aos-delay="100">
+        Discover different aspects of eco-friendly lifestyle
+      </p>
+      <div class="category-grid">
+        <article class="category-card" data-aos="fade-up">
+          <i class="fas fa-leaf" aria-hidden="true"></i>
+          <h3>Zero Waste Living</h3>
+          <p>Minimize waste and live more sustainably</p>
+        </article>
+        <article class="category-card" data-aos="fade-up" data-aos-delay="100">
+          <i class="fas fa-plane" aria-hidden="true"></i>
+          <h3>Sustainable Travel</h3>
+          <p>Eco-friendly travel tips and destinations</p>
+        </article>
+        <article class="category-card" data-aos="fade-up" data-aos-delay="200">
+          <i class="fas fa-tshirt" aria-hidden="true"></i>
+          <h3>Sustainable Fashion</h3>
+          <p>Ethical and eco-conscious fashion choices</p>
+        </article>
+        <article class="category-card" data-aos="fade-up" data-aos-delay="300">
+          <i class="fas fa-seedling" aria-hidden="true"></i>
+          <h3>Plant-Based Living</h3>
+          <p>Healthy and sustainable food choices</p>
+        </article>
+        <article class="category-card" data-aos="fade-up" data-aos-delay="400">
+          <i class="fas fa-home" aria-hidden="true"></i>
+          <h3>Green Home</h3>
+          <p>Create an eco-friendly living space</p>
+        </article>
+        <article class="category-card" data-aos="fade-up" data-aos-delay="500">
+          <i class="fas fa-heart" aria-hidden="true"></i>
+          <h3>Eco Fitness</h3>
+          <p>Sustainable workout and wellness tips</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer reveal-section" role="contentinfo" data-aos="fade-up">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-section">
+          <h3>EcoSphere</h3>
+          <p>Empowering sustainable living through education and community engagement.</p>
+        </div>
+        <div class="footer-section">
+          <h3>Quick Links</h3>
+          <ul>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h3>Categories</h3>
+          <ul>
+            <li><a href="zero-waste.html">Zero Waste Living</a></li>
+            <li><a href="sustainable-travel.html">Sustainable Travel</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h3>Connect With Us</h3>
+          <div class="social-links">
+            <a href="#" aria-label="Follow us on Facebook"><i class="fab fa-facebook" aria-hidden="true"></i></a>
+            <a href="#" aria-label="Follow us on Twitter"><i class="fab fa-twitter" aria-hidden="true"></i></a>
+            <a href="#" aria-label="Follow us on Instagram"><i class="fab fa-instagram" aria-hidden="true"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; <script>document.write(new Date().getFullYear())</script> EcoSphere. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
