@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sign Up / Login - EcoSphere</title>
+  <meta name="description" content="Sign up or log in to join our sustainable living community">
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body class="light-mode">
+  <nav class="navbar" role="navigation">
+    <div class="container nav-container">
+      <a href="index.html" class="logo" aria-label="EcoSphere Home">
+        <i class="fas fa-leaf" aria-hidden="true"></i>
+        <span>EcoSphere</span>
+      </a>
+      <ul class="nav-menu" role="menu">
+        <li class="nav-item dropdown" role="none">
+          <button class="nav-link" role="menuitem" aria-haspopup="true" aria-expanded="false">
+            <b>Categories</b><i class="fas fa-chevron-down" aria-hidden="true"></i>
+          </button>
+          <ul class="dropdown-menu" role="menu">
+            <li role="none"><a href="#" class="dropdown-item" role="menuitem"><b>Zero Waste Living</b></a></li>
+            <li role="none"><a href="#" class="dropdown-item" role="menuitem"><b>Sustainable Travel</b></a></li>
+            <!-- Add other categories as needed -->
+          </ul>
+        </li>
+        <li class="nav-item" role="none">
+          <a href="blog.html" class="nav-link" role="menuitem">Blog</a>
+        </li>
+        <li class="nav-item" role="none">
+          <a href="contact.html" class="nav-link" role="menuitem">Contact</a>
+        </li>
+        <li class="nav-item" role="none">
+          <a href="profile.html" class="nav-link" role="menuitem">Profile</a>
+        </li>
+        <li class="nav-item" role="none">
+          <button id="theme-toggle" class="theme-toggle" aria-label="Toggle dark mode">
+            <i class="fas fa-moon" aria-hidden="true"></i>
+          </button>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Main Content -->
+  <section class="form-section">
+    <br>
+    <div class="container">
+      <div class="form-container">
+        <br>
+        
+        <h1 class="form-title">Sign Up / Login</h1>
+        <form class="auth-form">
+          <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" id="name" placeholder="Enter your name" required>
+          </div>
+          <div class="form-group">
+            <label for="rollNo">Roll No.</label>
+            <input type="text" id="rollNo" placeholder="Enter your roll number" required>
+          </div>
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" placeholder="example@gmail.com" required>
+          </div>
+          <div class="form-group">
+            <label for="password">Password</label>
+            <input type="password" id="password" placeholder="Enter your password" required>
+          </div>
+          <div class="form-buttons">
+            <button type="submit" class="btn signup-btn">Sign Up</button>
+            <button type="button" class="btn login-btn">Login</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Profile - EcoSphere</title>
+  <meta name="description" content="View your EcoSphere profile">
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body class="light-mode">
+  <nav class="navbar" role="navigation">
+    <div class="container nav-container">
+      <a href="index.html" class="logo" aria-label="EcoSphere Home">
+        <i class="fas fa-leaf" aria-hidden="true"></i>
+        <span>EcoSphere</span>
+      </a>
+      <ul class="nav-menu" role="menu">
+        <li class="nav-item dropdown" role="none">
+          <button class="nav-link" role="menuitem" aria-haspopup="true" aria-expanded="false">
+            <b>Categories</b><i class="fas fa-chevron-down" aria-hidden="true"></i>
+          </button>
+          <ul class="dropdown-menu" role="menu">
+            <li role="none"><a href="#" class="dropdown-item" role="menuitem"><b>Zero Waste Living</b></a></li>
+            <li role="none"><a href="#" class="dropdown-item" role="menuitem"><b>Sustainable Travel</b></a></li>
+            <!-- Add other categories as needed -->
+          </ul>
+        </li>
+        <li class="nav-item" role="none">
+          <a href="blog.html" class="nav-link" role="menuitem">Blog</a>
+        </li>
+        <li class="nav-item" role="none">
+          <a href="contact.html" class="nav-link" role="menuitem">Contact</a>
+        </li>
+        <li class="nav-item" role="none">
+          <a href="profile.html" class="nav-link" role="menuitem">Profile</a>
+        </li>
+        <li class="nav-item" role="none">
+          <button id="theme-toggle" class="theme-toggle" aria-label="Toggle dark mode">
+            <i class="fas fa-moon" aria-hidden="true"></i>
+          </button>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Main Content -->
+  <section class="profile-section">
+   <!-- Update profile details div -->
+<div class="profile-details">
+  <p><strong>Name:</strong> <span id="profileName"></span></p>
+  <p><strong>Roll No.:</strong> <span id="profileRollNo"></span></p>
+  <p><strong>Email:</strong> <span id="profileEmail"></span></p>
+</div>
+<button class="logout-btn" id="logoutBtn">Logout</button>
+  </section>
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    // Initialize AOS
+    AOS.init({
+      duration: 800,
+      once: true,
+      mirror: false,
+      offset: 50
+    });
+
+    // Display Profile Information
+    const user = JSON.parse(localStorage.getItem('user'));
+    if (user) {
+      document.getElementById('profileName').textContent = user.name;
+      document.getElementById('profileRollNo').textContent = user.rollNo;
+      document.getElementById('profileEmail').textContent = user.email;
+    } else {
+      window.location.href = 'signup.html';
+    }
+
+    // Logout Functionality
+    document.getElementById('logoutBtn').addEventListener('click', () => {
+      localStorage.removeItem('user');
+      window.location.href = 'signup.html';
+    });
+
+    // Navigation Toggle (from your script.js)
+    const navToggle = document.querySelector('.nav-toggle');
+    const navMenu = document.querySelector('.nav-menu');
+    navToggle.addEventListener('click', () => {
+      navToggle.classList.toggle('active');
+      navMenu.classList.toggle('active');
+      const isExpanded = navToggle.classList.contains('active');
+      navToggle.setAttribute('aria-expanded', isExpanded);
+    });
+
+    // Theme Toggle (from your script.js)
+    const themeToggle = document.getElementById('theme-toggle');
+    const body = document.body;
+    themeToggle.addEventListener('click', () => {
+      body.classList.toggle('dark-mode');
+      const isDark = body.classList.contains('dark-mode');
+      localStorage.setItem('dark-mode', isDark);
+      themeToggle.classList.add('theme-switching');
+      setTimeout(() => themeToggle.classList.remove('theme-switching'), 500);
+    });
+    if (localStorage.getItem('dark-mode') === 'true') {
+      body.classList.add('dark-mode');
+    }
+  </script>
+</body>
+</html>

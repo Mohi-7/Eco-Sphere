@@ -11,30 +11,21 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
 </head>
 <body class="light-mode">
-  <!-- Navigation Bar (same as index.html) -->
   <nav class="navbar" role="navigation">
     <div class="container nav-container">
       <a href="index.html" class="logo" aria-label="EcoSphere Home">
         <i class="fas fa-leaf" aria-hidden="true"></i>
         <span>EcoSphere</span>
       </a>
-      <button class="nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
       <ul class="nav-menu" role="menu">
         <li class="nav-item dropdown" role="none">
           <button class="nav-link" role="menuitem" aria-haspopup="true" aria-expanded="false">
-            Categories <i class="fas fa-chevron-down" aria-hidden="true"></i>
+            <b>Categories</b><i class="fas fa-chevron-down" aria-hidden="true"></i>
           </button>
           <ul class="dropdown-menu" role="menu">
-            <li role="none"><a href="zero-waste.html" class="dropdown-item" role="menuitem">Zero Waste Living</a></li>
-            <li role="none"><a href="sustainable-travel.html" class="dropdown-item" role="menuitem">Sustainable Travel</a></li>
-            <li role="none"><a href="sustainable-fashion.html" class="dropdown-item" role="menuitem">Sustainable Fashion</a></li>
-            <li role="none"><a href="plant-based.html" class="dropdown-item" role="menuitem">Plant-Based Living</a></li>
-            <li role="none"><a href="green-home.html" class="dropdown-item" role="menuitem">Green Home</a></li>
-            <li role="none"><a href="eco-fitness.html" class="dropdown-item" role="menuitem">Eco Fitness</a></li>
+            <li role="none"><a href="#" class="dropdown-item" role="menuitem"><b>Zero Waste Living</b></a></li>
+            <li role="none"><a href="#" class="dropdown-item" role="menuitem"><b>Sustainable Travel</b></a></li>
+            <!-- Add other categories as needed -->
           </ul>
         </li>
         <li class="nav-item" role="none">
@@ -44,15 +35,16 @@
           <a href="contact.html" class="nav-link" role="menuitem">Contact</a>
         </li>
         <li class="nav-item" role="none">
+          <a href="profile.html" class="nav-link" role="menuitem">Profile</a>
+        </li>
+        <li class="nav-item" role="none">
           <button id="theme-toggle" class="theme-toggle" aria-label="Toggle dark mode">
-            <i class="fas fa-sun" aria-hidden="true"></i>
             <i class="fas fa-moon" aria-hidden="true"></i>
           </button>
         </li>
       </ul>
     </div>
   </nav>
-
   <!-- Page Hero Section -->
   <section class="page-hero" data-aos="fade-up">
     <div class="container">

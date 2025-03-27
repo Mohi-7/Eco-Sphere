@@ -340,3 +340,46 @@ AOS.init({
     }
   `;
   document.head.appendChild(achievementStyles);
+
+  // Signup/Login Functionality
+const signupBtn = document.getElementById('signupBtn');
+const loginBtn = document.getElementById('loginBtn');
+const authForm = document.getElementById('authForm');
+const authMessage = document.getElementById('authMessage');
+
+if (signupBtn && loginBtn && authForm && authMessage) {
+  signupBtn.addEventListener('click', () => {
+    const name = document.getElementById('name').value;
+    const rollNo = document.getElementById('rollNo').value;
+    const email = document.getElementById('email').value;
+    const password = document.getElementById('password').value;
+
+    if (name && rollNo && email && password) {
+      const user = { name, rollNo, email, password };
+      localStorage.setItem('user', JSON.stringify(user));
+      authMessage.textContent = 'Sign up successful! You can now log in.';
+      authMessage.style.color = 'green';
+      // authForm.reset();
+    } else {
+      authMessage.textContent = 'Please fill in all fields.';
+      authMessage.style.color = 'red';
+    }
+  });
+
+  loginBtn.addEventListener('click', () => {
+    const email = document.getElementById('email').value;
+    const password = document.getElementById('password').value;
+    const storedUser = JSON.parse(localStorage.getItem('user'));
+
+    if (storedUser && storedUser.email === email && storedUser.password === password) {
+      authMessage.textContent = 'Login successful! Redirecting to profile...';
+      authMessage.style.color = 'green';
+      setTimeout(() => {
+        window.location.href = 'profile.html';
+      }, 1000);
+    } else {
+      authMessage.textContent = 'Invalid email or password.';
+      authMessage.style.color = 'red';
+    }
+  });
+}
